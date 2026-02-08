@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clonez Business Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {
+      font-family: "Karma", sans-serif;
+      margin:0;
+    }
+
+    /* Background gradient */
+    body {
+      background: linear-gradient(135deg, rgba(106,17,203,0.6), rgba(37,117,252,0.6), rgba(0,198,255,0.6), rgba(0,255,252,0.6)),
+                  url('https://images.unsplash.com/photo-1507679799987-c73779587ccf') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    /* Top bar colors */
+    .w3-top .w3-white {
+      background-color:#1E90FF !important; 
+      color:white !important;
+    }
+
+    /* Sidebar */
+    .w3-sidebar {
+      background-color:#FF8C00 !important; 
+      color:white;
+    }
+    .w3-sidebar .w3-bar-item:hover {
+      background-color:#FFA500 !important;
+    }
+
+    /* Cards */
+    .service-card, .blog-card, .testimonial-card {
+      transition: transform 0.3s, background-color 0.3s;
+      border-left:5px solid #FF8C00;
+      background-color: rgba(255,255,255,0.85);
+      color: black;
+    }
+    .service-card:hover, .blog-card:hover, .testimonial-card:hover {
+      transform: translateY(-5px); 
+      background-color: #f1f1f1; 
+      border-left-color:#1E90FF;
+    }
+
+    /* Headings */
+    h1, h2 {
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    /* Cards spacing */
+    .card-container {
+      padding:15px;
+    }
+
+    /* Links hover */
+    a {text-decoration:none; color:#f4f5f7;}
+    a:hover {opacity:0.8;}
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" 
+     style="display:none;z-index:3;width:40%;min-width:250px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close ×</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+  <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button">Services</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="#blog" onclick="w3_close()" class="w3-bar-item w3-button">Blog</a>
+  <a href="#testimonials" onclick="w3_close()" class="w3-bar-item w3-button">Testimonials</a>
+  <a href="#careers" onclick="w3_close()" class="w3-bar-item w3-button">Careers</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+</nav>
+
+<!-- Top Menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge w3-card" style="max-width:1200px;margin:auto;">
+    <div class="w3-button w3-left w3-padding-16" onclick="w3_open()">☰</div>
+    <div class="w3-center w3-padding-16">Clonez Business Hub</div>
+    <div class="w3-right w3-padding-16">📧 Contact</div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- Home Section -->
+  <div class="w3-container w3-padding-32 w3-center" id="home">
+    <h1>Welcome to Clonez Business Hub</h1>
+    <p>Your trusted partner for business innovation, growth, and strategy. We deliver tailored solutions to help companies of all sizes achieve sustainable success.</p>
+    <p>Explore our services, learn from our blog, and see what our clients say about working with us. We help businesses from startups to established enterprises achieve operational excellence, higher profits, and long-term sustainability.</p>
+  </div>
+
+  <!-- Services Section -->
+  <div class="w3-container w3-padding-32" id="services">
+    <h2 class="w3-center">Our Services</h2>
+    <div class="w3-row-padding w3-margin-top card-container">
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding service-card">
+          <h3>Business Consulting</h3>
+          <p>Analyze operations, identify challenges, and receive expert guidance to scale efficiently. We focus on strategy, performance metrics, and actionable solutions for long-term growth.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding service-card">
+          <h3>Market Analysis</h3>
+          <p>Detailed insights into competitors, trends, and opportunities help your business stay ahead. We provide market intelligence that supports decision-making and reduces risks.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding service-card">
+          <h3>Project Management</h3>
+          <p>Ensure projects meet deadlines, budgets, and objectives. Our experts implement frameworks like Agile, Lean, and PMI standards to deliver success efficiently.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding service-card">
+          <h3>Financial Planning</h3>
+          <p>Optimize resources, reduce risks, and create long-term strategies. We assist with cash flow management, budgeting, and investment planning.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding service-card">
+          <h3>Startup Support</h3>
+          <p>Guidance from business plans to funding and operations. We help startups turn ideas into profitable, scalable businesses with a solid foundation.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding service-card">
+          <h3>Training & Workshops</h3>
+          <p>Skill-building for teams to improve productivity, leadership, and operational knowledge. We offer workshops in digital transformation, sales, marketing, and management.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding service-card">
+          <h3>Digital Marketing</h3>
+          <p>Boost your online presence with social media strategies, SEO, and content marketing. We help businesses reach their audience effectively.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding service-card">
+          <h3>Business Automation</h3>
+          <p>Implement modern tools and software to automate operations, improve efficiency, and reduce manual errors, freeing your team to focus on growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-light-grey" id="about">
+    <h2 class="w3-center">About Us</h2>
+    <p>Clonez Business Hub is a modern consulting company committed to helping businesses succeed. We combine strategy, technology, and innovation to deliver measurable results. Our team has experience across multiple industries, ensuring personalized solutions for every client.</p>
+    <p>We focus on sustainable growth, operational excellence, and empowering our clients to make informed decisions. From startups to large corporations, we provide the tools and strategies necessary to thrive in a competitive market.</p>
+  </div>
+
+  <!-- Blog Section -->
+  <div class="w3-container w3-padding-32" id="blog">
+    <h2 class="w3-center">Business Insights</h2>
+    <div class="blog-card">
+      <h3>5 Strategies to Grow Your Startup</h3>
+      <p>Actionable steps to increase revenue and scale your startup effectively. Understand customer behavior, optimize operations, and maximize growth potential.</p>
+    </div>
+    <div class="blog-card">
+      <h3>Market Analysis Tips for Small Businesses</h3>
+      <p>Learn how to analyze competitors and trends, find gaps in the market, and position your business strategically to increase revenue.</p>
+    </div>
+    <div class="blog-card">
+      <h3>Effective Project Management Techniques</h3>
+      <p>Best practices for planning, execution, and monitoring. Tools, frameworks, and tips to ensure projects finish on time and within budget.</p>
+    </div>
+    <div class="blog-card">
+      <h3>Business Automation for Efficiency</h3>
+      <p>Explore modern automation tools that save time, reduce costs, and improve accuracy in your daily operations.</p>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="w3-container w3-padding-32 w3-light-grey" id="testimonials">
+    <h2 class="w3-center">Testimonials</h2>
+    <div class="testimonial-card">
+      <p>"Clonez Business Hub helped our company double revenue in just one year! Their insights and strategies are top-notch."</p>
+      <p><b>- Brian Musili, CEO</b></p>
+    </div>
+    <div class="testimonial-card">
+      <p>"Professional and reliable. Their market analysis and consulting transformed our approach entirely."</p>
+      <p><b>- Sarah M., Founder</b></p>
+    </div>
+    <div class="testimonial-card">
+      <p>"Excellent workshops and consulting services. Our team is now more productive and focused."</p>
+      <p><b>- John D., Operations Manager</b></p>
+    </div>
+  </div>
+
+  <!-- Careers Section -->
+  <div class="w3-container w3-padding-32" id="careers">
+    <h2 class="w3-center">Careers</h2>
+    <p>Join Clonez Business Hub! We are looking for talented, motivated individuals passionate about business innovation and growth.</p>
+    <ul>
+      <li>Business Consultants</li>
+      <li>Market Analysts</li>
+      <li>Project Managers</li>
+      <li>Financial Advisors</li>
+      <li>Training Specialists</li>
+      <li>Digital Marketing Experts</li>
+      <li>Automation Specialists</li>
+    </ul>
+    <p>Email your CV to: <a href="mailto:careers@clonezbusiness.com">careers@clonezbusiness.com</a></p>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32 w3-center" id="contact">
+    <h2>Contact Us</h2>
+    <p>Questions or project inquiries? Reach out to us today!</p>
+    <p>Email: <a href="mailto:contact@clonezbusiness.com">contact@clonezbusiness.com</a></p>
+    <p>Phone: <a href="tel:+254712345678">+254 712 345 678</a></p>
+    <p>Address: 123 Business Avenue, Nairobi, Kenya</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-center">
+    <p>&copy; 2026 Clonez Business Hub. All rights reserved.</p>
+    <p>
+      <span class="w3-tag">Consulting</span>
+      <span class="w3-tag">Strategy</span>
+      <span class="w3-tag">Growth</span>
+      <span class="w3-tag">Management</span>
+      <span class="w3-tag">Innovation</span>
+      <span class="w3-tag">Training</span>
+      <span class="w3-tag">Automation</span>
+      <span class="w3-tag">Marketing</span>
+    </p>
+  </footer>
+
+</div>
+
+<!-- Sidebar Script -->
+<script>
+function w3_open() { document.getElementById("mySidebar").style.display = "block"; }
+function w3_close() { document.getElementById("mySidebar").style.display = "none"; }
+</script>
+
+</body>
+</html>
